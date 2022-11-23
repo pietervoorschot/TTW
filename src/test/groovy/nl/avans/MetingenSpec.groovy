@@ -1,9 +1,9 @@
 package nl.avans
 
-import grails.testing.web.controllers.ControllerUnitTest
+import grails.testing.gorm.DomainUnitTest
 import spock.lang.Specification
 
-class SensorControllerSpec extends Specification implements ControllerUnitTest<SensorController> {
+class MetingenSpec extends Specification implements DomainUnitTest<Metingen> {
 
     def setup() {
     }

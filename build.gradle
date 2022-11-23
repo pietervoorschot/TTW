@@ -73,7 +73,9 @@ dependencies {
     testImplementation "org.seleniumhq.selenium:selenium-support:4.0.0"
     testRuntimeOnly "org.seleniumhq.selenium:selenium-chrome-driver:4.0.0"
     testRuntimeOnly "org.seleniumhq.selenium:selenium-firefox-driver:4.0.0"
-    runtimeOnly "mysql:mysql-connector-java:8.0.30"
+
+    //Add the mysql-connector
+    implementation "mysql:mysql-connector-java:8.0.30"
 }
 
 bootRun {

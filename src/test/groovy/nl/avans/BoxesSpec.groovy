@@ -3,7 +3,7 @@ package nl.avans
 import grails.testing.gorm.DomainUnitTest
 import spock.lang.Specification
 
-class MetingSpec extends Specification implements DomainUnitTest<Meting> {
+class BoxesSpec extends Specification implements DomainUnitTest<Boxes> {
 
     def setup() {
     }

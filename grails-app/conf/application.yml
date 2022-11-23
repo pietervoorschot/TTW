@@ -113,14 +113,13 @@ dataSource:
 environments:
     development:
         dataSource:
-            dataSource:
-                dbCreate: validate
-                url: jdbc:mysql://aaad01.avans.nl:8883/tunnelTomatoesDB
-                driverClassName: com.mysql.cj.jdbc.Driver
-                dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-                username: aart
-                password: myNXP
-                logSql: true
+            dbCreate: validate
+            url: jdbc:mysql://aaad01.avans.nl:8883/tunnelTomatoesDB
+            driverClassName: com.mysql.cj.jdbc.Driver
+            dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+            username: student
+            password: tunnelt0matoes
+            logSql: true
     test:
         dataSource:
             dbCreate: update
