@@ -25,4 +25,7 @@ class Metingen implements Serializable {
 
     static constraints = {
     }
+    String getLabel(){
+        "'${tijd}'"
+    }
 }
