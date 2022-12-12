@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>Meting - AaadTomaat</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <asset:stylesheet src="application.css"/>
     <asset:javascript src="application.js"/>
 </head>
@@ -66,5 +67,33 @@
         </g:each>
         </tbody>
     </table>
+<script>
+    const labels = [
+        ${raw(sensorData*.label.join(','))}
+    ];
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'My First dataset',
+            backgroundColor: 'rgb(255,99,132)',
+            borderColor: 'rgb(255,99,132)',
+            data: [${sensorData.waarde.join(', ')}],
+        }]
+    };
+    const config = {
+        type: 'line',
+        data: data,
+        options: {}
+    };
+
+</script>
+
+<script>
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+</script>
 </body>
 </html>
