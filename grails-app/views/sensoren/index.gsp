@@ -67,6 +67,10 @@
         </g:each>
         </tbody>
     </table>
+
+<div>
+    <canvas id="myChart"></canvas>
+</div>
 <script>
     const labels = [
         ${raw(sensorData*.label.join(','))}
