@@ -7,70 +7,35 @@
 <body>
 <content tag="nav">
     <li class="dropdown">
-        <a href="sensoren/index" role="button" aria-expanded="false">statistics <span class="caret"></span></a>
-%{--        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Application Status <span class="caret"></span></a>--}%
-%{--        <ul class="dropdown-menu">--}%
-%{--            <li class="dropdown-item"><a href="#">Environment: ${grails.util.Environment.current.name}</a></li>--}%
-%{--            <li class="dropdown-item"><a href="#">App profile: ${grailsApplication.config.getProperty('grails.profile')}</a></li>--}%
-%{--            <li class="dropdown-item"><a href="#">App version:--}%
-%{--                <g:meta name="info.app.version"/></a>--}%
-%{--            </li>--}%
-%{--            <li role="separator" class="dropdown-divider"></li>--}%
-%{--            <li class="dropdown-item"><a href="#">Grails version:--}%
-%{--                <g:meta name="info.app.grailsVersion"/></a>--}%
-%{--            </li>--}%
-%{--            <li class="dropdown-item"><a href="#">Groovy version: ${GroovySystem.getVersion()}</a></li>--}%
-%{--            <li class="dropdown-item"><a href="#">JVM version: ${System.getProperty('java.version')}</a></li>--}%
-%{--            <li role="separator" class="dropdown-divider"></li>--}%
-%{--            <li class="dropdown-item"><a href="#">Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</a></li>--}%
-%{--        </ul>--}%
+        <a href="sensoren/index" role="button" aria-haspopup="true" aria-expanded="false">Graphs<span class="caret"></span></a>
     </li>
-%{--    <li class="dropdown">--}%
-%{--        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Artefacts <span class="caret"></span></a>--}%
-%{--        <ul class="dropdown-menu">--}%
-%{--            <li class="dropdown-item"><a href="#">Controllers: ${grailsApplication.controllerClasses.size()}</a></li>--}%
-%{--            <li class="dropdown-item"><a href="#">Domains: ${grailsApplication.domainClasses.size()}</a></li>--}%
-%{--            <li class="dropdown-item"><a href="#">Services: ${grailsApplication.serviceClasses.size()}</a></li>--}%
-%{--            <li class="dropdown-item"><a href="#">Tag Libraries: ${grailsApplication.tagLibClasses.size()}</a></li>--}%
-%{--        </ul>--}%
-%{--    </li>--}%
-%{--    <li class="dropdown">--}%
-%{--        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Installed Plugins <span class="caret"></span></a>--}%
-%{--        <ul class="dropdown-menu dropdown-menu-right">--}%
-%{--            <g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">--}%
-%{--                <li class="dropdown-item"><a href="#">${plugin.name} - ${plugin.version}</a></li>--}%
-%{--            </g:each>--}%
-%{--        </ul>--}%
-%{--    </li>--}%
+    <li class="dropdown">
+        <a href="sensoren/index" role="button" aria-haspopup="true" aria-expanded="false">View setpoints<span class="caret"></span></a>
+    </li>
+    <li class="dropdown">
+        <a href="sensoren/index" role="button" aria-haspopup="true" aria-expanded="false">Work notes<span class="caret"></span></a>
+    </li>
 </content>
 
 <div class="svg" role="presentation">
-%{--    <asset:image src="tunnel.jpg" class="grails-logo-container"/>--}%
     <div class="grails-logo-container">
-%{--        <asset:image src="logo.svg" class="grails-logo"/>--}%
-        <asset:image src="tunnel.jpg" class="grails-logo"/>
+        <asset:image src="tunnel2.jpg" class="grails-logo"/>
     </div>
 </div>
 
 <div id="content" role="main">
     <div class="container">
         <section class="row colset-2-its">
-            <h1>Welcome to Grails</h1>
-
-            <p>
-                Welkom bij Tunnel Tomatoes. Wij groeien de lekkerste en sappigste tomaten.
-            </p>
-
-            <div id="controllers" role="navigation">
-                <h2>Available Controllers:</h2>
-                <ul>
-                    <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-                        <li class="controller">
-                            <g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link>
-                        </li>
-                    </g:each>
+            <h1>Welcome to the TunnelTomatoes application</h1>
+            <p>In this application, you will be able to view the full history of all measured data,
+            create work notes for your employees and much more.</p>
+%{--            <div id="controllers" role="navigation">--}%
+                <ul id="ul-buttons">
+                    <li><button href="sensoren/index" class="button-homepage">Graphs</button></li>
+                    <li><button href="#" class="button-homepage">View setpoints</button></li>
+                    <li><button href="#" class="button-homepage">Work notes</button></li>
                 </ul>
-            </div>
+%{--            </div>--}%
         </section>
     </div>
 </div>

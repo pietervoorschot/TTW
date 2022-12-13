@@ -32,7 +32,7 @@ pre {
 }
 
 .navbar-dark a {
-    color: #ffffff !important;
+    color: #def1d3 !important;
     font-size: 18px !important;
     text-decoration: none;
 }
@@ -41,7 +41,7 @@ pre {
 
 }
 .navbar-dark, .navbar-static-top {
-    background-color: #424649;
+    background-color: #1c7731;
     border: 0px;
 }
 a.navbar-brand {
@@ -56,7 +56,7 @@ a.navbar-brand {
     color: white !important;
 }
 .navbar-nav>li>a:hover {
-    background-color: #2559a7 !important;
+    background-color: #336b2b !important;
     color: white !important;
 }
 .navbar-nav>li>a {
@@ -66,7 +66,7 @@ a.navbar-brand {
     background-color: white;
 }
 .navbar-dark .navbar-toggle:hover, .navbar-dark .navbar-toggle:focus {
-    background-color: #2559a7;
+    background-color: #336b2b;
 }
 
 .navbar-toggler {
