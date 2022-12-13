@@ -615,3 +615,7 @@ img.grails-logo {
     margin-left: -35%;
     text-align: center;
 }
+
+button-homepage:hover {
+    color: #def1d3 !important;
+}

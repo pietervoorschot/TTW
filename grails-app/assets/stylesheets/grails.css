@@ -396,12 +396,12 @@ body, html {
 }
 
 a {
-    color: #2559a7;
+    /*color: #2559a7;*/
     text-decoration: underline;
 }
 
 a:hover {
-    color: #2559a7;
+    /*color: #2559a7;*/
     text-decoration: none
 }
 
@@ -707,7 +707,7 @@ h8 {
 }
 
 #content .colset-3-article article h1 a:hover {
-    color: #46a5c8
+    /*color: #46a5c8*/
 }
 
 #content .colset-3-article article p, #content .colset-3-article article time {

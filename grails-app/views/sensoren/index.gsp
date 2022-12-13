@@ -8,24 +8,64 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>Meting - AaadTomaat</title>
+    <meta name="layout" content="main"/>
+    <title>TunnelTomatoes Application - Graphs</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <asset:stylesheet src="application.css"/>
     <asset:javascript src="application.js"/>
 </head>
 <body>
+    <content tag="nav">
+        <li class="dropdown">
+            <a href="sensoren/index" role="button" aria-haspopup="true" aria-expanded="false">Graphs<span class="caret"></span></a>
+        </li>
+        <li class="dropdown">
+            <a href="#" role="button" aria-haspopup="true" aria-expanded="false">View setpoints<span class="caret"></span></a>
+        </li>
+        <li class="dropdown">
+            <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Work notes<span class="caret"></span></a>
+        </li>
+    </content>
     <g:form action="index">
         <table>
             <tr>
+                <td>From date</td>
+                <td>
+                    <g:datePicker   name = "fromDate"
+                                    from = "${new Date()}"
+                                    precision = "day"
+                                    optionValue = "tijd"
+                                    optionKey = "tijd"
+                                    value = "${startDateFilter}"
+                                    noSelection = "['':'-Choose-']"
+                                    onchange = "submit();"
+                    />
+                </td>
+            </tr>
+            <tr>
+                <td>To date</td>
+                <td>
+                    <g:datePicker   name = "toDate"
+                                    from = "${new Date()}"
+                                    optionValue = "tijd"
+                                    optionKey = "tijd"
+                                    precision = "day"
+                                    value = "${endDateFilter}"
+                                    noSelection = "['':'-Choose-']"
+                                    onchange = "submit();"
+                    />
+                </td>
+            </tr>
+            <tr>
                 <td>Device</td>
                 <td>
-                    <g:select name="boxFilter"
-                              from="${boxes}"
-                              optionValue="id"
-                              optionKey="id"
-                              value = "${boxFilter}"
-                              noSelection="['':'Kies Device']"
-                              onchange="submit();"
+                    <g:select   name = "boxFilter"
+                                from = "${boxes}"
+                                optionValue = "id"
+                                optionKey = "id"
+                                value = "${boxFilter}"
+                                noSelection = "['':'Kies Device']"
+                                onchange = "submit();"
                     />
                 </td>
             </tr>
@@ -50,9 +90,27 @@
     <table>
         <thead>
             <tr>
+                <th>SensorId</th>
+                <th>Soort</th>
+                <th>Eenheid</th>
+            </tr>
+        </thead>
+        <tbody>
+            <g:each in="${sensors}" var="sensor" status="teller">
+                <tr>
+                    <td>${sensor.id}</td>
+                    <td>${sensor.soort}</td>
+                    <td>${sensor.eenheid}</td>
+                </tr>
+            </g:each>
+        </tbody>
+    </table>
+    <table>
+        <thead>
+            <tr>
                 <th>Date</th>
                 <th>Device</th>
-                <th>Sensor</th>
+                <th>SensorId</th>
                 <th>Waarde</th>
             </tr>
         </thead>

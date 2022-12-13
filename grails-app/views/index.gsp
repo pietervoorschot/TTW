@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title>TunnelTomatoes Application</title>
+    <title>TunnelTomatoes Application - Homepage</title>
 </head>
 <body>
 <content tag="nav">
@@ -10,10 +10,10 @@
         <a href="sensoren/index" role="button" aria-haspopup="true" aria-expanded="false">Graphs<span class="caret"></span></a>
     </li>
     <li class="dropdown">
-        <a href="sensoren/index" role="button" aria-haspopup="true" aria-expanded="false">View setpoints<span class="caret"></span></a>
+        <a href="#" role="button" aria-haspopup="true" aria-expanded="false">View setpoints<span class="caret"></span></a>
     </li>
     <li class="dropdown">
-        <a href="sensoren/index" role="button" aria-haspopup="true" aria-expanded="false">Work notes<span class="caret"></span></a>
+        <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Work notes<span class="caret"></span></a>
     </li>
 </content>
 
@@ -31,9 +31,9 @@
             create work notes for your employees and much more.</p>
 %{--            <div id="controllers" role="navigation">--}%
                 <ul id="ul-buttons">
-                    <li><button href="sensoren/index" class="button-homepage">Graphs</button></li>
-                    <li><button href="#" class="button-homepage">View setpoints</button></li>
-                    <li><button href="#" class="button-homepage">Work notes</button></li>
+                    <li><a href="sensoren/index" class="button-homepage">Graphs</a></li>
+                    <li><a href="#" class="button-homepage">View setpoints</a></li>
+                    <li><a href="#" class="button-homepage">Work notes</a></li>
                 </ul>
 %{--            </div>--}%
         </section>
