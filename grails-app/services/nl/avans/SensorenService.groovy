@@ -14,13 +14,13 @@ class SensorenService {
         if (fromYear != null)
             fromDate.set(fromYear.toInteger(), fromMonth.toInteger() - 1, fromDay.toInteger() - 1, fromHour.toInteger(), fromMinute.toInteger());
         else
-            fromDate.set(new Date());
+            fromDate.setTime(new Date());
 
         Calendar toDate = Calendar.getInstance();
         if (toYear != null)
             toDate.set(toYear.toInteger(), toMonth.toInteger() - 1, toDay.toInteger() - 1, toHour.toInteger(), toMinute.toInteger());
         else
-            toDate.set(new Date());
+            toDate.setTime(new Date());
 
         if (boxFilter || fromDate || toDate) {
             Metingen.createCriteria().list {
