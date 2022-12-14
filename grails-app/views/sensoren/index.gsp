@@ -33,7 +33,6 @@
                 <td>
                     <g:datePicker   name = "fromDate"
                                     from = "${new Date()}"
-                                    precision = "day"
                                     optionValue = "tijd"
                                     optionKey = "tijd"
                                     value = "${startDateFilter}"
@@ -49,7 +48,6 @@
                                     from = "${new Date()}"
                                     optionValue = "tijd"
                                     optionKey = "tijd"
-                                    precision = "day"
                                     value = "${endDateFilter}"
                                     noSelection = "['':'-Choose-']"
                                     onchange = "submit();"
@@ -98,7 +96,7 @@
         <tbody>
             <g:each in="${sensors}" var="sensor" status="teller">
                 <tr>
-                    <td>${sensor.id}</td>
+                    <td>${sensor.sensorid}</td>
                     <td>${sensor.soort}</td>
                     <td>${sensor.eenheid}</td>
                 </tr>
