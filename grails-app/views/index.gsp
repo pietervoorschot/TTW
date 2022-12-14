@@ -15,6 +15,9 @@
     <li class="dropdown">
         <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Work notes<span class="caret"></span></a>
     </li>
+    <li class="dropdown">
+        <a href="sensorinfomation/index" role="button" aria-haspopup="true" aria-expanded="false">Sensor info<span class="caret"></span></a>
+    </li>
 </content>
 
 <div class="svg" role="presentation">
@@ -34,6 +37,7 @@
                     <li><a href="sensoren/index" class="button-homepage">Graphs</a></li>
                     <li><a href="#" class="button-homepage">View setpoints</a></li>
                     <li><a href="#" class="button-homepage">Work notes</a></li>
+                    <li><a href="sensorinfomation/index" class="button-homepage">Sensor Info</a> </li>
                 </ul>
 %{--            </div>--}%
         </section>

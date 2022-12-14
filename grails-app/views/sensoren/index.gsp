@@ -25,6 +25,9 @@
         <li class="dropdown">
             <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Work notes<span class="caret"></span></a>
         </li>
+        <li class="dropdown">
+            <a href="../sensorinfomation/index" role="button" aria-haspopup="true" aria-expanded="false">Sensor info<span class="caret"></span></a>
+        </li>
     </content>
     <g:form action="index">
         <table>
