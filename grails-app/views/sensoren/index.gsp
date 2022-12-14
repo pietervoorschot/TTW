@@ -135,7 +135,7 @@
     const data = {
         labels: labels,
         datasets: [{
-            label: 'My First dataset',
+            label: 'Selected sensor' ,
             backgroundColor: 'rgb(255,99,132)',
             borderColor: 'rgb(255,99,132)',
             data: [${sensorData.waarde.join(', ')}],
