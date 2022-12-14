@@ -38,6 +38,7 @@
                     <li><a href="#" class="button-homepage">View setpoints</a></li>
                     <li><a href="#" class="button-homepage">Work notes</a></li>
                     <li><a href="sensorinfomation/index" class="button-homepage">Sensor Info</a> </li>
+                    <li><a href="machineLearning/index" class="button-homepage">Machine Learning</a></li>
                 </ul>
 %{--            </div>--}%
         </section>
