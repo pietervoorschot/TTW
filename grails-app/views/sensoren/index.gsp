@@ -17,16 +17,13 @@
 <body>
     <content tag="nav">
         <li class="dropdown">
-            <a href="sensoren/index" role="button" aria-haspopup="true" aria-expanded="false">Graphs<span class="caret"></span></a>
+            <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Graphs<span class="caret"></span></a>
         </li>
         <li class="dropdown">
             <a href="#" role="button" aria-haspopup="true" aria-expanded="false">View setpoints<span class="caret"></span></a>
         </li>
         <li class="dropdown">
             <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Work notes<span class="caret"></span></a>
-        </li>
-        <li class="dropdown">
-            <a href="../sensorinfomation/index" role="button" aria-haspopup="true" aria-expanded="false">Sensor info<span class="caret"></span></a>
         </li>
     </content>
     <g:form action="index">
@@ -131,18 +128,114 @@
     <canvas id="myChart"></canvas>
 </div>
 <script>
-    const labels = [
-        ${raw(sensorData*.label.join(','))}
-    ];
+    const labels = [ ${raw(sensorData*.label.join(','))} ];
+    const filteredLabels = [];
+    let c = 0;
+    labels.forEach(item => {
+        if(!filteredLabels.includes(item)){
+            filteredLabels[c] = item;
+            c++;
+        }
+    })
+    const values = { items: [${sensorData.waarde.join(',')}] };
+    const humidity = [];
+    const temperature = [];
+    const occupation = [];
+    const co2 = [];
+    const luminosity = [];
+    const windspeed = [];
+    const winddirection = [];
+    let i = 0;
+
+    '${sensorData.sensor.soort}'.split(', ').forEach(item => {
+        if (item.includes('[')){
+            item = item.replace('[', '');
+        }
+        if (item.includes(']')){
+            item = item.replace(']', '');
+        }
+
+        switch (item) {
+            case 'humidity':
+                humidity.push(values.items.at(i));
+                break;
+            case 'temperature':
+                temperature.push(values.items.at(i));
+                break;
+            case 'occupation':
+                occupation.push(values.items.at(i));
+                break;
+            case 'co2':
+                co2.push(values.items.at(i));
+                break;
+            case 'luminosity':
+                luminosity.push(values.items.at(i));
+                break;
+            case 'windsnelheid':
+                windspeed.push(values.items.at(i));
+                break;
+            case 'windrichting':
+                winddirection.push(values.items.at(i));
+                break;
+        }
+
+        i++;
+    })
+
+    console.log("humidity = " + humidity);
+    console.log("temperature = " + temperature);
+    console.log("occupation = " + occupation);
+    console.log("co2 = " + co2);
+    console.log("luminosity = " + luminosity);
+    console.log("windspeed = " + windspeed);
+    console.log("winddirection = " + winddirection);
 
     const data = {
-        labels: labels,
-        datasets: [{
-            label: 'Selected sensor' ,
-            backgroundColor: 'rgb(255,99,132)',
-            borderColor: 'rgb(255,99,132)',
-            data: [${sensorData.waarde.join(', ')}],
-        }]
+        labels: filteredLabels,
+        datasets: [
+            {
+                label: 'Humidity',
+                backgroundColor: 'rgb(56,161,225)',
+                borderColor: 'rgb(56,161,225)',
+                data: humidity
+            },
+            {
+                label: 'Temperature',
+                backgroundColor: 'rgb(210,28,66)',
+                borderColor: 'rgb(210,28,66)',
+                data: temperature
+            },
+            {
+                label: 'Occupation',
+                backgroundColor: 'rgb(143,218,29)',
+                borderColor: 'rgb(143,218,29)',
+                data: occupation
+            },
+            {
+                label: 'Co2',
+                backgroundColor: 'rgb(80,35,238)',
+                borderColor: 'rgb(80,35,238)',
+                data: co2
+            },
+            {
+                label: 'Luminosity',
+                backgroundColor: 'rgb(227,153,79)',
+                borderColor: 'rgb(227,153,79)',
+                data: luminosity
+            },
+            {
+                label: 'Wind speed',
+                backgroundColor: 'rgb(183,168,232)',
+                borderColor: 'rgb(183,168,232)',
+                data: windspeed
+            },
+            {
+                label: 'Wind direction',
+                backgroundColor: 'rgb(154,122,89)',
+                borderColor: 'rgb(154,122,89)',
+                data: winddirection
+            }
+        ]
     };
     const config = {
         type: 'line',
