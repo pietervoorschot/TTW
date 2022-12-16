@@ -28,5 +28,19 @@
     </li>
 </content>
     <p>Hier komt nog meer over machine learning</p>
+<table>
+    <thead>
+    <tr>
+        <th>Sensor</th>
+        <th>Actie</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>test</td>
+        <td>test2</td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
