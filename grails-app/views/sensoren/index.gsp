@@ -91,40 +91,42 @@
         </g:each>
         </tbody>
     </table>
-    <table>
-        <thead>
-            <tr>
-                <th>SensorId</th>
-                <th>Soort</th>
-                <th>Eenheid</th>
-            </tr>
-        </thead>
-        <tbody>
-            <g:each in="${sensors}" var="sensor" status="teller">
-                <tr>
-                    <td>${sensor.sensorid}</td>
-                    <td>${sensor.soort}</td>
-                    <td>${sensor.eenheid}</td>
-                </tr>
-            </g:each>
-        </tbody>
-    </table>
-    <table>
+%{--    <table>--}%
+%{--        <thead>--}%
+%{--            <tr>--}%
+%{--                <th>SensorId</th>--}%
+%{--                <th>Soort</th>--}%
+%{--                <th>Eenheid</th>--}%
+%{--            </tr>--}%
+%{--        </thead>--}%
+%{--        <tbody>--}%
+%{--            <g:each in="${sensors}" var="sensor" status="teller">--}%
+%{--                <tr>--}%
+%{--                    <td>${sensor.sensorid}</td>--}%
+%{--                    <td>${sensor.soort}</td>--}%
+%{--                    <td>${sensor.eenheid}</td>--}%
+%{--                </tr>--}%
+%{--            </g:each>--}%
+%{--        </tbody>--}%
+%{--    </table>--}%
+    <table id="tbMeasurements">
         <thead>
             <tr>
                 <th>Date</th>
-                <th>Device</th>
-                <th>SensorId</th>
-                <th>Waarde</th>
+                <th>Sensor name</th>
+%{--                <th>SensorId</th>--}%
+                <th>Value</th>
+%{--                <th>Unit</th>--}%
             </tr>
         </thead>
         <tbody>
         <g:each in="${sensorData}" var="meting">
             <tr>
                 <td>${meting.tijd}</td>
-                <td>${meting.sensor.box.id}</td>
-                <td>${meting.sensor.sensorid}</td>
-                <td>${meting.waarde}</td>
+%{--                <td>${meting.sensor.box.id}</td>--}%
+                <td>${meting.sensor.soort}</td>
+                <td>${meting.waarde} ${meting.sensor.eenheid}</td>
+%{--                <td>${meting.sensor.eenheid}</td>--}%
             </tr>
         </g:each>
         </tbody>
@@ -249,9 +251,6 @@
         options: {}
     };
 
-</script>
-
-<script>
     const myChart = new Chart(
         document.getElementById('myChart'),
         config

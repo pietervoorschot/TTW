@@ -619,3 +619,8 @@ img.grails-logo {
 button-homepage:hover {
     color: #def1d3 !important;
 }
+
+#tbMeasurements {
+    width: 75%;
+    margin: auto auto;
+}
