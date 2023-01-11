@@ -51,7 +51,7 @@ class MachineLearningService {
 
         if (searchTreeAndAddYesNode(rootNode, existingNodeID, newNodeID, newQuestAns)){
             System.out.println("Added node "+ newNodeID +
-            " onto " \ yes\ "branch of node " + existingNodeID);
+            " onto  \" yes\"branch of node " + existingNodeID);
         }
         else System.out.println("Node " + existingNodeID + " not found");
     }
@@ -78,8 +78,23 @@ class MachineLearningService {
                     if (currentNode.noBranch != null){
                         return(searchTreeAndAddYesNode(currentNode.noBranch, existingNodeID, newNodeID,newQuestAns));
                     }
+                    else return(false); //not found here
+                    }
                 }
+            return(false); //not found here
             }
+        }
+    //ADD NO NODE
+    public void addNoNode(int existingNodeID, int newNodeID, String newQuestAns){
+        //If no root node do nothing
+
+        if (rootNode == null){
+            System.out.println("ERROR: geen root node!");
+            return;
+        }
+        //Search tree
+        if(searchTreeAndAddNoNode(rootNode, existingNodeID,newNodeID,newQuestAns)){
+
         }
     }
 
