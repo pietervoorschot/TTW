@@ -18,16 +18,21 @@
 <body>
 <content tag="nav">
     <li class="dropdown">
-        <a href="sensoren/index" role="button" aria-haspopup="true" aria-expanded="false">Graphs<span class="caret"></span></a>
+        <a href="../sensoren/index" role="button" aria-haspopup="true" aria-expanded="false">Graphs<span class="caret"></span></a>
     </li>
     <li class="dropdown">
-        <a href="#" role="button" aria-haspopup="true" aria-expanded="false">View setpoints<span class="caret"></span></a>
+        <a href="" role="button" aria-haspopup="true" aria-expanded="false">View setpoints<span class="caret"></span></a>
     </li>
     <li class="dropdown">
-        <a href="#" role="button" aria-haspopup="true" aria-expanded="false">Work notes<span class="caret"></span></a>
+        <a href="" role="button" aria-haspopup="true" aria-expanded="false">Work notes<span class="caret"></span></a>
+    </li>
+    <li class="dropdown">
+        <a href="../sensorinfomation/index" role="button" aria-haspopup="true" aria-expanded="false">Sensor information<span class="caret"></span></a>
+    </li>
+    <li class="dropdown">
+        <a href="../machineLearning/index">Machine Learning<span class="caret"></span></a>
     </li>
 </content>
-    <p>Hier komt nog meer over machine learning</p>
 <table>
     <thead>
     <tr>
