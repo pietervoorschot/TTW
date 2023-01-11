@@ -9,7 +9,7 @@ class MachineLearningService {
         private String questOrAns = null
         private BinTree yesBranch = null
         private BinTree noBranch = null
-
+    }
 
         def BinTree(int newNodeID, String newQuestAns) {
             nodeID = newNodeID
@@ -115,4 +115,4 @@ class MachineLearningService {
         }
 
     }
-}
+
